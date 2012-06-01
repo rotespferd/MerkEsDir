@@ -27,7 +27,15 @@ body{
 }
 
 #merkliste {
-	background: -webkit-linear-gradient(#ebe664 0%, #f3e07d 100%);
+	background: -webkit-linear-gradient(#f3f1ab 0%, #f2e6a7 100%);
+	width: 450px;
+	padding: 10px 10px;
+	border-radius: 15px 150px 15px 15px;
+}
+
+#merkliste li {
+	list-style: none;
+	padding-bottom: 15px;
 }
 
 .hidden{
