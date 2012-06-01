@@ -14,6 +14,22 @@ body{
 	border-radius: 70px 20px;
 }
 
+#brand {
+	padding: 10px;
+	border-radius: 20px;
+	font-family: 'Graduate', cursive;
+	display: inline-block;
+	background: -webkit-linear-gradient(#72aced 78.15%, #669def 100%);
+}
+
+#gemerkt h2 {
+	font-family: 'Graduate', cursive;
+}
+
+#merkliste {
+	background: -webkit-linear-gradient(#ebe664 0%, #f3e07d 100%);
+}
+
 .hidden{
 	display: none;
 }
