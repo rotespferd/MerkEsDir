@@ -1,3 +1,43 @@
+body{
+	background-color: #7bb0f2;
+	font-family: sans-serif;
+}
+
+#container{
+	background: -webkit-linear-gradient(#f7f7f7 62.58%, #ffffff 100%);
+	width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding: 15px 10px 10px 50px;
+	
+	border-radius: 70px 20px;
+}
+
+#brand {
+	padding: 10px;
+	border-radius: 20px;
+	font-family: 'Graduate', cursive;
+	display: inline-block;
+	background: -webkit-linear-gradient(#72aced 78.15%, #669def 100%);
+}
+
+#gemerkt h2 {
+	font-family: 'Graduate', cursive;
+}
+
+#merkliste {
+	background: -webkit-linear-gradient(#f3f1ab 0%, #f2e6a7 100%);
+	width: 450px;
+	padding: 10px 10px;
+	border-radius: 15px 150px 15px 15px;
+}
+
+#merkliste li {
+	list-style: none;
+	padding-bottom: 15px;
+}
+
 .hidden{
 	display: none;
 }
