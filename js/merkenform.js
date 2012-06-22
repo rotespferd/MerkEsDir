@@ -1,4 +1,4 @@
-var savePath = "upload";
+var savePath = "http://127.0.0.1:8080/upload";
 
 $("#send").click(function() {
 	saveItem();
@@ -18,8 +18,8 @@ function saveItem() {
 		return;
 	}
 	
-	input = "<li class='hidden'>" + input + "</li>";
-	$("#merkliste").append(input);
+	liItem = "<li class='hidden'>" + input + "</li>";
+	$("#merkliste").append(liItem);
 	$(".hidden").fadeIn(500);
 	$("#input").val("");
 	$("#input").focus();
@@ -31,12 +31,10 @@ function sendItem(item) {
 	$.ajax({
 		url: savePath,
 		type: "POST",
-		context: document.body,
 		success: function() {
 			//irgendeine erfolgsmeldung?
-			console.log("Item" + item + " successfull uploaded.");
+			console.log("Item " + item + " successfull uploaded.");
 		},
-		data: {merkItem: item},
-		dataType: "text"
+		data: {merkItem: item}//TODO: wird das richtig übertragen?
 	});
 }
