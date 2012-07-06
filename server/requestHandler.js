@@ -1,7 +1,8 @@
 var querystring = require("querystring"),
     fs = require("fs"),
-    formidable = require("formidable"),
     url = require("url");
+    
+var db = require("./db");
 
 function start(response) {
   console.log("Request handler 'start' was called.");
@@ -31,8 +32,11 @@ function upload(response, request) {
   var url = url.parse(request.url, true);
   
   var msg = url.query.merkItem;
+  var user = url.query.user;
   
   console.log("Get the merkItem " + msg);
+  
+  db.saveMerkItem(msg, "marian");
 
   response.writeHead(200, {"Content-Type": "text/html"});
   response.write("received image:<br/>");
