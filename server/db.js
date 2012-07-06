@@ -24,7 +24,6 @@ function saveMerkItem(item, user){
 });
 }
 
-saveMerkItem("Merke", "admin");
 
 //export from function
 exports.saveMerkItem = saveMerkItem;

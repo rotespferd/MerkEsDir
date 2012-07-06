@@ -1,6 +1,8 @@
 var qs = require("querystring"),
     fs = require("fs"),
     url = require("url");
+    
+var db = require("./db");
 
 function start(response) {
   console.log("Request handler 'start' was called.");
@@ -27,17 +29,15 @@ function start(response) {
 function upload(response, request) {
   console.log("Request handler 'upload' was called.");
 
-  var params = '';
-  request.on('data', function (data) {
-      params += data;
-  });
-  request.on('end', function () {
-	  	console.log("Get the parameters " + params);
-      var POST = qs.parse(params);
-      console.log("Get the merkItem " + POST.merkItem);
-      // save POST.merkItem to db
+  var url = url.parse(request.url, true);
+  
+  var msg = url.query.merkItem;
+  var user = url.query.user;
+  
+  console.log("Get the merkItem " + msg);
+  
+  db.saveMerkItem(msg, "marian");
 
-  });
 
   response.writeHead(200, {"Content-Type": "text/html"});
   response.write("received item:<br/>");

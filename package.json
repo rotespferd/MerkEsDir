@@ -1,0 +1,13 @@
+{
+	"name": "MerkEsDir",
+	"version": "0.2.0",
+	
+	"scripts": {
+		"start": "node server/index.js",
+		"test": "mocha"
+	},
+	"dependencies" : {
+		"mongodb" : "*",
+		"mocha" : "*"
+	}
+}
