@@ -1,6 +1,9 @@
+@font-face { font-family: Bariol; src: url('fonts/Bariol_Light.otf') }
+@font-face { font-family: Bariol; font-weight: bold; src: url('fonts/Bariol_Light.otf') }
+
 body{
 	background-color: #7bb0f2;
-	font-family: sans-serif;
+	font-family: Bariol, sans-serif;
 }
 
 #container{
@@ -17,13 +20,15 @@ body{
 #brand {
 	padding: 10px;
 	border-radius: 20px;
-	font-family: 'Graduate', cursive;
+	font-family: Bariol, sans-serif;
+	font-weight: bold;
 	display: inline-block;
 	background: -webkit-linear-gradient(#72aced 78.15%, #669def 100%);
 }
 
 #gemerkt h2 {
-	font-family: 'Graduate', cursive;
+	font-family: Bariol, sans-serif;
+	font-weight: bold;
 }
 
 #merkliste {
